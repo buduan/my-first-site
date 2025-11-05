@@ -7,7 +7,7 @@
   直接从 页面部分 开始吧！
   -->
   <Navigation class="mb-4 py-2 w-screen px-4" />
-  <router-view />
+  <router-view class="max-w-6xl mx-auto" />
 </template>
 
 <script setup>

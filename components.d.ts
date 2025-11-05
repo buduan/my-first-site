@@ -15,6 +15,7 @@ declare module 'vue' {
     Column: typeof import('./src/components/helper/Column.vue')['default']
     FlexCol: typeof import('./src/components/helper/Column.vue')['default']
     FlexRow: typeof import('./src/components/helper/Row.vue')['default']
+    Grid: typeof import('./src/components/helper/Grid.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Row: typeof import('./src/components/helper/Row.vue')['default']

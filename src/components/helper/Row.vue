@@ -1,3 +1,26 @@
+<!-- 
+==============================================
+📏 Row 组件 - 水平布局辅助组件
+==============================================
+这个组件用于将内容从左到右水平排列
+
+使用示例：
+<Row align="center">
+  <div>内容1</div>
+  <div>内容2</div>
+  <div>内容3</div>
+</Row>
+
+参数说明：
+- align: 控制内容的对齐方式
+  - "left": 靠左对齐
+  - "center": 居中对齐（默认）
+  - "right": 靠右对齐
+  - "between": 两端对齐
+  - "around": 周围均匀分布
+  - "evenly": 完全均匀分布
+==============================================
+-->
 <template>
   <div :class="containerClass">
     <slot></slot>
@@ -7,10 +30,11 @@
 <script setup>
 import { computed } from 'vue'
 
+// 定义组件接收的参数
 const props = defineProps({
   align: {
     type: String,
-    default: 'center',
+    default: 'center', // 默认居中对齐
     validator: (value) =>
       ['left', 'center', 'right', 'between', 'around', 'evenly'].includes(value),
   },
